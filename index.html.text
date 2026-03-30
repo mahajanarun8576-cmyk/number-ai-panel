@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background:black; text-align:center; color:white; }
+.panel {
+  border:2px solid #ff00ff;
+  padding:20px;
+  width:200px;
+  margin:auto;
+  border-radius:15px;
+  box-shadow:0 0 20px #ff00ff;
+}
+button {
+  padding:10px;
+  margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+<h2>NUMBER AI</h2>
+<h1 id="num">5</h1>
+<p>DATA INJECTED ✅</p>
+
+<button onclick="generate()">EXECUTE</button>
+<button onclick="hide()">HIDE</button>
+</div>
+
+<script>
+function generate() {
+  document.getElementById("num").innerText =
+    Math.floor(Math.random() * 10);
+}
+
+function hide() {
+  document.querySelector(".panel").style.display="none";
+}
+</script>
+
+</body>
+</html>
